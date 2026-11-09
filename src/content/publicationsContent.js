@@ -187,6 +187,16 @@ const content = {
           type: 'publicationGrid',
           content: [
             {
+              title: 'Antimicrobial resistance trends and lineage distribution among invasive pneumococcal disease isolates pre- and post-pneumococcal conjugate vaccine introduction, South Africa',
+              platform: 'Journal of Infection',
+              buttons: [
+                {
+                  text: 'Journal',
+                  url: 'https://doi.org/10.1016/j.jinf.2026.106878'
+                }
+              ]
+            },
+            {
               title: 'Clonal expansion of global pneumococcal sequence cluster 3 within serotype 8 after 13-valent pneumococcal conjugate vaccine introduction, South Africa',
               platform: 'Microbial Genomics',
               buttons: [
