@@ -7,24 +7,18 @@ on:
 
 jobs:
   build_and_deploy:
-    runs-on: ubuntu-22.04
-    strategy:
-      matrix:
-        node-version: [20]
+    runs-on: ubuntu-latest
+
     steps:
         - name: Checkout repository
-          uses: actions/checkout@v4
+          uses: actions/checkout@v7
 
         - name: Install pnpm
-          uses: pnpm/action-setup@v4
+          uses: pnpm/setup@v3
           with:
-            version: 9
-
-        - name: Use Node.js ${{ matrix.node-version }}
-          uses: actions/setup-node@v4
-          with:
-            node-version: ${{ matrix.node-version }}
-            cache: 'pnpm'
+            version: 12
+            runtime: node@22
+            cache: true
 
         - name: Install dependencies
           run: pnpm install
